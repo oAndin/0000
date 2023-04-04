@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,25 +44,25 @@
         <div class="lado-a-lado">
             <div class="lado">
                 <label for="sabor">Escolha o sabor</label>
-        <select  id="sabor" required>
-            <option disabled selected>Selecione</option>
-            <option>Calabresa</option>
-            <option>Portuguesa</option>
-            <option>Peperoni</option>
-            <option>Frango com Catupiry</option>
-            <option>Mussarela</option>
-            <option>Carne de Sol</option>
-        </select>
+                <select id="sabor" required>
+                    <option disabled selected>Selecione</option>
+                    <option>Calabresa</option>
+                    <option>Portuguesa</option>
+                    <option>Peperoni</option>
+                    <option>Frango com Catupiry</option>
+                    <option>Mussarela</option>
+                    <option>Carne de Sol</option>
+                </select>
             </div>
             <div class="lado">
                 <label for="pagamento">Pagamento</label>
-        <select id="pagamento" required>
-            <option disabled selected>Selecione</option>
-            <option>Dinheiro</option>
-            <option>Pix</option>
-            <Option>Cartão</Option>
-        </select>
-            </div>  
+                <select id="pagamento" required>
+                    <option disabled selected>Selecione</option>
+                    <option>Dinheiro</option>
+                    <option>Pix</option>
+                    <Option>Cartão</Option>
+                </select>
+            </div>
         </div>
 
 
@@ -70,13 +71,14 @@
         <button type="submit" onClick="mandarPedido()"> Enviar</button>
     </form>
 
-<script>
-    function mandarPedido(){
-        event.preventDefault();
-        window.location.href = `https://api.whatsapp.com/send?phone=5585985240267&text=Oi,%20eu%20sou%20${nome.value}%20do%20cliente%22,%20gostaria%20de%20pedir%20uma%20pizza%20de%20${sabor.value},%20para%20entrega,%20no%20${endereco.value}%20${numero.value},%20${bairro.value},%20meu%20contatos%20s%C3%A3o%20${telefone.value}%20${email.value}%7D`
-    }
+    <script>
+        function mandarPedido() {
+            event.preventDefault();
+            window.location.href = `https://wa.me/5585988464805?text=Ol%C3%A1%2C+meu+nome+%C3%A9+${nome.value}+gostaria+de+pedir+uma+pizza+de+${sabor.value}%2C+para+entrega+no+endere%C3%A7o+${endereco.value}%2C+n%C3%BAmero+${numero.value}%2C+complemento+${complemento.value}%2C+pagamento+em+${pagamento.value}%2C+observa%C3%A7%C3%B5es+${obs.value}%2C+meus+contatos+s%C3%A3o+${telefone.value}+e+${email.value}.`
+        }
 
-</script>
+    </script>
 
 </body>
+
 </html>
